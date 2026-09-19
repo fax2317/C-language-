@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+
+int main()
+{
+    char item[50]="";
+    float price= 0.0f;
+    int quantity=0;
+    float total= 0.0f;
+    char currency[]="€";
+    printf("what would you like to buy?");
+    /*scanf("%s,item")
+    scanf qui non va bene perche non accetta
+    spazi vuoti,bisogna usare fgets
+    fgets(item, sizeof(item),
+    */
+    fgets(item,sizeof(item),stdin);
+    /*sizeoff serve a limitare 
+    in numero di caratteri da salvare
+    per limitare un buffer overflow*/
+    printf("how many item/s y want?");
+    scanf("%d",&quantity);
+    printf("What's the item price?");
+    scanf("%f",&price);
+    total=quantity*price;
+    printf("il totale è:%.2f",total);
+    return 0;
+}
